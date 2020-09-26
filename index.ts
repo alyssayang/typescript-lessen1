@@ -1,6 +1,10 @@
 // Import stylesheets
-import './style.css';
+import "./style.css";
 
-// Write TypeScript code!
-const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
+import $ from "jquery";
+
+$(() => {
+  $("button").click(() => {
+    alert($("input").val() + " : " + $("select option:selected").text());
+  });
+});
